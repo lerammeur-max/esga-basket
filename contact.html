@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site du club de basket de Genas.">
+  <title>Contact — ESGA Basket</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-ball">🏀</span>
+      <span>ESGA BASKET</span>
+    </a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="club.html">Le club</a></li>
+      <li><a href="equipes.html">Nos équipes</a></li>
+      <li><a href="matchs.html">Matchs & calendrier</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="rejoindre.html">Rejoindre le club</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="badge">NOUS CONTACTER</span>
+    <h1>Contact</h1>
+    <p>Une question sur le club, une équipe ou une inscription ?</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="card">
+      <h2>Informations</h2><br>
+      <div class="info-list">
+        <div class="info-item"><span class="symbol">📍</span><div><strong>Adresse</strong><br>2 rue de la Fraternité, 69740 Genas</div></div>
+        <div class="info-item"><span class="symbol">✉️</span><div><strong>Email</strong><br><a href="mailto:president.esgabasket@gmail.com">president.esgabasket@gmail.com</a><br><a href="mailto:esga-basket@gmail.com">esga-basket@gmail.com</a></div></div>
+        <div class="info-item"><span class="symbol">📞</span><div><strong>Téléphone</strong><br><a href="tel:+33650533215">06 50 53 32 15</a></div></div>
+        <div class="info-item"><span class="symbol">🏢</span><div><strong>Président</strong><br>Vincent CALLEAU</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Envoyer un message</h2><br>
+      <form id="contact-form">
+        <div class="form-group"><label for="name">Nom</label><input id="name" type="text" required></div>
+        <div class="form-group"><label for="email">Email</label><input id="email" type="email" required></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+        <div id="form-message" class="notice" style="display:none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><strong>🏀 ESGA Basket — Genas</strong><br>Site du club</div>
+    <div>© <span id="year"></span> ESGA Basket</div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+
+</body>
+</html>
