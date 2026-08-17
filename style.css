@@ -1,7 +1,8 @@
 
 :root {
-    --primary: #e87500;
-    --primary-dark: #bd5e00;
+    --primary: #0049AF;
+    --primary-dark: #003B8F;
+    --accent: #E66A22;
     --dark: #111111;
     --dark-2: #1b1b1b;
     --light: #f6f6f6;
@@ -60,15 +61,13 @@ img { max-width: 100%; display: block; }
     white-space: nowrap;
 }
 
-.brand-ball {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: var(--primary);
-    font-size: 22px;
+.brand-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex: 0 0 52px;
 }
+
 
 .nav-links {
     display: flex;
@@ -108,7 +107,7 @@ img { max-width: 100%; display: block; }
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at 80% 20%, rgba(232,117,0,.45), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(230,106,34,.45), transparent 28%),
         linear-gradient(135deg, #111 0%, #202020 55%, #111 100%);
     color: white;
 }
@@ -132,10 +131,10 @@ img { max-width: 100%; display: block; }
 .badge {
     display: inline-block;
     padding: 7px 12px;
-    background: rgba(232,117,0,.16);
-    border: 1px solid rgba(232,117,0,.45);
+    background: rgba(230,106,34,.16);
+    border: 1px solid rgba(230,106,34,.45);
     border-radius: 999px;
-    color: #ffad5b;
+    color: #FF9A5C;
     font-weight: 800;
     font-size: .85rem;
     margin-bottom: 18px;
@@ -239,7 +238,7 @@ img { max-width: 100%; display: block; }
     border-radius: 14px;
     display: grid;
     place-items: center;
-    background: #fff0e1;
+    background: #EAF1FF;
     margin-bottom: 16px;
     font-size: 25px;
 }
@@ -257,7 +256,7 @@ img { max-width: 100%; display: block; }
 
 .team-top span {
     display: inline-block;
-    color: #ffad5b;
+    color: #FF9A5C;
     font-size: .82rem;
     font-weight: 800;
     text-transform: uppercase;
