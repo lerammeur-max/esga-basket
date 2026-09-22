@@ -1,72 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site du club de basket de Genas.">
-  <title>Le club — ESGA Basket</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="ESGA Basket — Genas">
+    <title>Le club — ESGA Basket</title>
+    <link rel="stylesheet" href="css/style.css">
   
+<style>
+.club-choice-list{max-width:1000px;margin:auto;display:grid;gap:14px}.club-choice{background:#fff;border:1px solid #ddd9d3;border-radius:18px;overflow:hidden}.club-choice-button{width:100%;border:0;background:#fff;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;text-align:left;font:inherit;transition:.2s}.club-choice-button:hover{background:#f47b12;color:#fff}.club-choice-left{display:flex;align-items:center;gap:18px}.club-choice-left>b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff}.club-choice-left strong{display:block;font-family:"Barlow Condensed",sans-serif;font-size:30px}.club-choice-left small{display:block;color:#777;font-size:14px}.club-choice-button:hover small{color:#fff}.club-choice-arrow{font-size:30px;transition:.2s}.club-choice.open .club-choice-arrow{transform:rotate(90deg)}.club-choice-content{display:none;padding:0 22px 22px;background:#faf9f7}.club-choice.open .club-choice-content{display:block}.club-choice-card{min-height:95px;padding:20px;border:1px solid #ddd9d3;border-radius:14px;background:#fff;color:#111;text-decoration:none;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.2s}.club-choice-card:hover{background:#111;color:#fff;transform:translateY(-2px)}.club-choice-card strong{font-family:"Barlow Condensed",sans-serif;font-size:25px}.club-choice-card span{color:#777;font-size:13px}.club-choice-card:hover span{color:#ddd}.club-choice-card b{margin-top:6px}
+</style>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.club-choice-button').forEach(b=>b.addEventListener('click',()=>{const x=b.closest('.club-choice');document.querySelectorAll('.club-choice').forEach(y=>{if(y!==x)y.classList.remove('open')});x.classList.toggle('open')}))})</script>
 </head>
-<body>
+  <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img class="brand-logo" src="images/images.jpg" alt="Logo ESGA Basket Genas" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"><span class="brand-name">ESGA <b>BASKET</b></span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <div class="nav-club-dropdown">
+  <button class="nav-club-button" type="button" aria-expanded="false" aria-controls="navClubMenu">
+    <span>Le club</span>
+  </button>
 
-<header class="site-header">
-  <div class="container navbar">
-    <a class="brand" href="index.html">
-      <img src="logo-esga.png" alt="TEST">
-      <span>ESGA BASKET</span>
-    </a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="club.html">Le club</a></li>
-      <li><a href="equipes.html">Nos équipes</a></li>
-      <li><a href="matchs.html">Matchs & calendrier</a></li>
-      <li><a href="galerie.html">Galerie</a></li>
-      <li><a href="rejoindre.html">Rejoindre le club</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-
-<main>
-<section class="page-hero">
-  <div class="container">
-    <span class="badge">NOTRE IDENTITÉ</span>
-    <h1>Le club</h1>
-    <p>Découvre l'univers de l'ESGA Basket et ce qui fait vivre le club.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container grid-2">
-    <div>
-      <div class="section-title"><div><h2>Notre projet</h2></div></div>
-      <p>L'ESGA Basketball est une association sportive de Genas qui propose la pratique du basket en compétition et en loisir dès l'âge de 5 ans.</p>
-      <br>
-      <p>Le club est présidé par Vincent CALLEAU. Les informations publiques de la Ville de Genas indiquent son siège au 2 rue de la Fraternité, 69740 Genas.</p>
+  <div class="nav-club-menu" id="navClubMenu" hidden>
+    <div class="nav-club-panel">
+      <a class="nav-club-item" href="club-presentation.html">
+        <span>🏀</span>
+        <span><strong>Le club</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="histoire.html">
+        <span>📖</span>
+        <span><strong>Histoire du club</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="bureau.html">
+        <span>👥</span>
+        <span><strong>Bureau</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="staff.html">
+        <span>🏀</span>
+        <span><strong>Staff</strong></span>
+        <b>›</b>
+      </a>
     </div>
-    <div class="card">
-      <h3>Nos valeurs</h3><br>
-      <div class="info-list">
-        <div class="info-item"><span class="symbol">🏀</span><div><strong>Passion</strong><br>Faire découvrir et aimer le basket.</div></div>
-        <div class="info-item"><span class="symbol">🤝</span><div><strong>Respect</strong><br>Respecter ses partenaires, adversaires et encadrants.</div></div>
-        <div class="info-item"><span class="symbol">🚀</span><div><strong>Progression</strong><br>Grandir sportivement et humainement.</div></div>
+  </div>
+</div>
+        <div class="nav-team-dropdown">
+            <button class="nav-team-button" type="button" aria-expanded="false" aria-controls="navTeamMenu">
+              <span>Équipes</span>
+            </button>
+
+            <div class="nav-team-menu" id="navTeamMenu" hidden>
+              <div class="nav-team-panel nav-team-level-1">
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket">
+                  <span>🏀</span>
+                  <span><strong>Mini basket</strong><small>Baby à U11</small></span>
+                  <b>›</b>
+                </button>
+
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant">
+                  <span>🏀</span>
+                  <span><strong>Enfant</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+
+                <button class="nav-team-item nav-team-next" type="button" data-next="adulte">
+                  <span>🏀</span>
+                  <span><strong>Adulte</strong><small>Seniors &amp; loisirs</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Enfant</button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant-feminin">
+                  <span>🏀</span>
+                  <span><strong>Féminin</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant-masculin">
+                  <span>🏀</span>
+                  <span><strong>Masculin</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket</button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket-feminin">
+                  <span>🏀</span>
+                  <span><strong>Féminin</strong><small>U9 à U11</small></span>
+                  <b>›</b>
+                </button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket-masculin">
+                  <span>🏀</span>
+                  <span><strong>Masculin</strong><small>U9 à U11</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket-feminin" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket Féminin</button>
+                <a class="nav-team-item" href="u9-feminin.html"><span>🏀</span><span><strong>U9</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-feminin.html"><span>🏀</span><span><strong>U11</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-2-feminin.html"><span>🏀</span><span><strong>U11-2</strong><small>Mini basket</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket-masculin" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket Masculin</button>
+                <a class="nav-team-item" href="u9-masculin.html"><span>🏀</span><span><strong>U9</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u9-2-masculin.html"><span>🏀</span><span><strong>U9-2</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-masculin.html"><span>🏀</span><span><strong>U11</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-2-masculin.html"><span>🏀</span><span><strong>U11-2</strong><small>Mini basket</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant-feminin" hidden>
+                <button class="nav-team-back" type="button" data-back="enfant">← Féminin</button>
+                <a class="nav-team-item" href="u13-feminin.html"><span>🏀</span><span><strong>U13</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u13-2-feminin.html"><span>🏀</span><span><strong>U13-2</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-feminin.html"><span>🏀</span><span><strong>U15</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-feminin.html"><span>🏀</span><span><strong>U18</strong><small>Féminin</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant-masculin" hidden>
+                <button class="nav-team-back" type="button" data-back="enfant">← Masculin</button>
+                <a class="nav-team-item" href="u13-masculin.html"><span>🏀</span><span><strong>U13</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u13-2-masculin.html"><span>🏀</span><span><strong>U13-2</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-masculin.html"><span>🏀</span><span><strong>U15</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-2-masculin.html"><span>🏀</span><span><strong>U15-2</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-masculin.html"><span>🏀</span><span><strong>U18</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-2-masculin.html"><span>🏀</span><span><strong>U18-2</strong><small>Masculin</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="adulte" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Adulte</button>
+                <a class="nav-team-item" href="loisirs.html"><span>🏀</span><span><strong>Loisirs</strong><small>Adulte</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-fille.html"><span>🏀</span><span><strong>Seniors fille</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-garcon.html"><span>🏀</span><span><strong>Seniors garçon</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-2-garcon.html"><span>🏀</span><span><strong>Seniors 2 garçon</strong><small>Masculin</small></span><b>›</b></a>
+              </div>
+            </div>
+          </div>
+
+          <a href="matchs.html">Matchs</a>
+          <a href="galerie.html">Galerie</a>
+          <a class="nav-cta" href="rejoindre.html">Rejoindre le club</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
     </div>
-  </div>
-</section>
+  </header>
+    <main>
+  <section class="page-hero">
+    <div class="container">
+      <span>ESGA BASKET • LE CLUB</span>
+      <h1>Découvre notre <em>club.</em></h1>
+      <p>Choisis une rubrique pour découvrir l'ESGA Basket, son histoire, son bureau et son staff.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width:850px;margin:0 auto 45px;text-align:center;">
+        <span>LE CLUB</span>
+        <h2>Une histoire, <em>des personnes.</em></h2>
+        <p>Sélectionne une rubrique pour accéder aux informations correspondantes.</p>
+      </div>
+
+      <div class="club-choice-list">
+        <article class="club-choice">
+          <button class="club-choice-button" type="button">
+            <span class="club-choice-left"><b>01</b><span><strong>Le club</strong><small>Qui sommes-nous ?</small></span></span>
+            <span class="club-choice-arrow">›</span>
+          </button>
+          <div class="club-choice-content">
+            <a class="club-choice-card" href="club-presentation.html"><strong>Présentation</strong><span>L'identité et les valeurs de l'ESGA Basket</span><b>→</b></a>
+          </div>
+        </article>
+
+        <article class="club-choice">
+          <button class="club-choice-button" type="button">
+            <span class="club-choice-left"><b>02</b><span><strong>Histoire du club</strong><small>Les origines et les grandes étapes</small></span></span>
+            <span class="club-choice-arrow">›</span>
+          </button>
+          <div class="club-choice-content">
+            <a class="club-choice-card" href="histoire.html"><strong>Notre histoire</strong><span>Découvrir le parcours du club</span><b>→</b></a>
+          </div>
+        </article>
+
+        <article class="club-choice">
+          <button class="club-choice-button" type="button">
+            <span class="club-choice-left"><b>03</b><span><strong>Bureau</strong><small>Les personnes qui font vivre le club</small></span></span>
+            <span class="club-choice-arrow">›</span>
+          </button>
+          <div class="club-choice-content">
+            <a class="club-choice-card" href="bureau.html"><strong>Le bureau</strong><span>Présidence, secrétariat, trésorerie...</span><b>→</b></a>
+          </div>
+        </article>
+
+        <article class="club-choice">
+          <button class="club-choice-button" type="button">
+            <span class="club-choice-left"><b>04</b><span><strong>Staff</strong><small>Encadrement sportif</small></span></span>
+            <span class="club-choice-arrow">›</span>
+          </button>
+          <div class="club-choice-content">
+            <a class="club-choice-card" href="staff.html"><strong>Le staff</strong><span>Entraîneurs et encadrement</span><b>→</b></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </main>
-
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <div><strong>🏀 ESGA Basket — Genas</strong><br>Site du club</div>
-    <div>© <span id="year"></span> ESGA Basket</div>
-  </div>
-</footer>
-<script src="script.js"></script>
-
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-fallback">🏀</span>
+            <span class="brand-name">ESGA <b>BASKET</b>
+            </span>
+          </div>
+          <p>Éveil Sportif Genas Azieu Basketball.</p>
+          <p>Genas • Rhône</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <a href="club.html">Le club</a>
+          <a href="equipes.html">Nos équipes</a>
+          <a href="matchs.html">Matchs & calendrier</a>
+        </div>
+        <div>
+          <h4>Club</h4>
+          <a href="rejoindre.html">Inscriptions</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>2 rue de la Fraternité<br>69740 Genas</p>
+          <a href="mailto:esga-basket@gmail.com">esga-basket@gmail.com</a>
+          <a href="tel:+33650533215">06 50 53 32 15</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">© <span id="year">
+      </span> ESGA Basket <span>Maquette de présentation</span>
+    </div>
+  </footer>
+  <script src="js/app.js">
+  </script>
 </body>
 </html>
