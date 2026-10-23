@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscription | ESGA Basket</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .registration-page {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #ffffff;
+            border: 1px solid #e5e0d8;
+            border-radius: 22px;
+            box-shadow: 0 15px 45px #0000000d;
+        }
+
+        .registration-page h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin: 10px 0;
+        }
+
+        .registration-page h1 span {
+            color: #0066cc;
+        }
+
+        .registration-intro {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .registration-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .registration-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .registration-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .registration-field label {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .registration-field input,
+        .registration-field select,
+        .registration-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            border: 1px solid #dedbd5;
+            border-radius: 10px;
+            background: #faf9f7;
+            font: inherit;
+        }
+
+        .registration-field input:focus,
+        .registration-field select:focus,
+        .registration-field textarea:focus {
+            outline: 2px solid #0066cc;
+            border-color: #0066cc;
+        }
+
+        .registration-section-title {
+            grid-column: 1 / -1;
+            margin: 18px 0 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e0d8;
+            font-size: 21px;
+        }
+
+        .registration-consent {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .registration-consent input {
+            margin-top: 4px;
+        }
+
+        .registration-submit {
+            grid-column: 1 / -1;
+            padding: 16px;
+            border: 0;
+            border-radius: 10px;
+            background: #0066cc;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .registration-submit:hover {
+            background: #0052a3;
+        }
+
+        .registration-note {
+            grid-column: 1 / -1;
+            font-size: 12px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .registration-page {
+                margin: 25px 12px;
+                padding: 22px;
+            }
+
+            .registration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .registration-field.full-width,
+            .registration-section-title,
+            .registration-consent,
+            .registration-submit,
+            .registration-note {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img class="brand-logo" src="images/images.jpg" alt="Logo ESGA Basket Genas" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"><span class="brand-name">ESGA <b>BASKET</b></span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <div class="nav-club-dropdown">
+  <button class="nav-club-button" type="button" aria-expanded="false" aria-controls="navClubMenu">
+    <span>Le club</span>
+  </button>
+
+  <div class="nav-club-menu" id="navClubMenu" hidden>
+    <div class="nav-club-panel">
+      <a class="nav-club-item" href="club-presentation.html">
+        <span>🏀</span>
+        <span><strong>Le club</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="histoire.html">
+        <span>📖</span>
+        <span><strong>Histoire du club</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="bureau.html">
+        <span>👥</span>
+        <span><strong>Bureau</strong></span>
+        <b>›</b>
+      </a>
+      <a class="nav-club-item" href="staff.html">
+        <span>🏀</span>
+        <span><strong>Staff</strong></span>
+        <b>›</b>
+      </a>
+    </div>
+  </div>
+</div>
+        <div class="nav-team-dropdown">
+            <button class="nav-team-button" type="button" aria-expanded="false" aria-controls="navTeamMenu">
+              <span>Équipes</span>
+            </button>
+
+            <div class="nav-team-menu" id="navTeamMenu" hidden>
+              <div class="nav-team-panel nav-team-level-1">
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket">
+                  <span>🏀</span>
+                  <span><strong>Mini basket</strong><small>Baby à U11</small></span>
+                  <b>›</b>
+                </button>
+
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant">
+                  <span>🏀</span>
+                  <span><strong>Enfant</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+
+                <button class="nav-team-item nav-team-next" type="button" data-next="adulte">
+                  <span>🏀</span>
+                  <span><strong>Adulte</strong><small>Seniors &amp; loisirs</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Enfant</button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant-feminin">
+                  <span>🏀</span>
+                  <span><strong>Féminin</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="enfant-masculin">
+                  <span>🏀</span>
+                  <span><strong>Masculin</strong><small>U13 à U18</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket</button>
+                <a class="nav-team-item" href="baby.html">
+                    <span>🏀</span>
+                    <span>
+                        <strong>Baby</strong>
+                        <small>Baby basket</small>
+                    </span>
+                    <b>›</b>
+                </a>
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket-feminin">
+                  <span>🏀</span>
+                  <span><strong>Féminin</strong><small>U9 à U11</small></span>
+                  <b>›</b>
+                </button>
+                <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket-masculin">
+                  <span>🏀</span>
+                  <span><strong>Masculin</strong><small>U9 à U11</small></span>
+                  <b>›</b>
+                </button>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket-feminin" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket Féminin</button>
+                <a class="nav-team-item" href="u9-feminin.html"><span>🏀</span><span><strong>U9</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-feminin.html"><span>🏀</span><span><strong>U11</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-2-feminin.html"><span>🏀</span><span><strong>U11-2</strong><small>Mini basket</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="mini-basket-masculin" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Mini basket Masculin</button>
+                <a class="nav-team-item" href="u9-masculin.html"><span>🏀</span><span><strong>U9</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u9-2-masculin.html"><span>🏀</span><span><strong>U9-2</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-masculin.html"><span>🏀</span><span><strong>U11</strong><small>Mini basket</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u11-2-masculin.html"><span>🏀</span><span><strong>U11-2</strong><small>Mini basket</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant-feminin" hidden>
+                <button class="nav-team-back" type="button" data-back="enfant">← Féminin</button>
+                <a class="nav-team-item" href="u13-feminin.html"><span>🏀</span><span><strong>U13</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u13-2-feminin.html"><span>🏀</span><span><strong>U13-2</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-feminin.html"><span>🏀</span><span><strong>U15</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-feminin.html"><span>🏀</span><span><strong>U18</strong><small>Féminin</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="enfant-masculin" hidden>
+                <button class="nav-team-back" type="button" data-back="enfant">← Masculin</button>
+                <a class="nav-team-item" href="u13-masculin.html"><span>🏀</span><span><strong>U13</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u13-2-masculin.html"><span>🏀</span><span><strong>U13-2</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-masculin.html"><span>🏀</span><span><strong>U15</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u15-2-masculin.html"><span>🏀</span><span><strong>U15-2</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-masculin.html"><span>🏀</span><span><strong>U18</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="u18-2-masculin.html"><span>🏀</span><span><strong>U18-2</strong><small>Masculin</small></span><b>›</b></a>
+              </div>
+
+              <div class="nav-team-panel" data-panel="adulte" hidden>
+                <button class="nav-team-back" type="button" data-back="level-1">← Adulte</button>
+                <a class="nav-team-item" href="loisirs.html"><span>🏀</span><span><strong>Loisirs</strong><small>Adulte</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-fille.html"><span>🏀</span><span><strong>Seniors fille</strong><small>Féminin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-garcon.html"><span>🏀</span><span><strong>Seniors garçon</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-2-garcon.html"><span>🏀</span><span><strong>Seniors 2 garçon</strong><small>Masculin</small></span><b>›</b></a>
+              </div>
+            </div>
+          </div>
+
+          <a href="matchs.html">Matchs</a>
+          <a href="galerie.html">Galerie</a>
+          <a class="nav-cta" href="rejoindre.html">Rejoindre le club</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+    <main class="registration-page">
+
+        <span style="color:#0066cc; font-size:12px; font-weight:800; letter-spacing:2px;">
+            ESGA BASKET · INSCRIPTIONS
+        </span>
+
+        <h1>Formulaire d'<span>inscription.</span></h1>
+
+        <p class="registration-intro">
+            Remplis les informations ci-dessous pour préparer ton inscription
+            au club. Les champs marqués d'une étoile sont obligatoires.
+        </p>
+
+        <form
+            class="registration-grid"
+            action="#"
+            method="post"
+            id="registrationForm"
+        >
+
+            <h2 class="registration-section-title">
+                Informations du joueur
+            </h2>
+
+            <div class="registration-field">
+                <label for="prenom">Prénom *</label>
+                <input id="prenom" name="prenom" autocomplete="given-name" required>
+            </div>
+
+            <div class="registration-field">
+                <label for="nom">Nom *</label>
+                <input id="nom" name="nom" autocomplete="family-name" required>
+            </div>
+
+            <div class="registration-field">
+                <label for="sexe">Sexe *</label>
+                <select id="sexe" name="sexe" required>
+                    <option value="">Choisir un sexe</option>
+                    <option value="F">Féminin</option>
+                    <option value="M">Masculin</option>
+                </select>
+            </div>
+
+            <div class="registration-field">
+                <label for="naissance">Date de naissance *</label>
+                <input id="naissance" name="naissance" type="date" required>
+            </div>
+
+            <div class="registration-field">
+                <label for="categorie">Catégorie souhaitée *</label>
+                <select id="categorie" name="categorie" required>
+                    <option value="">Choisir une catégorie</option>
+                    <option value="Baby">Baby basket de 5 à 6 ans</option>
+                    <option value="U9">U9 de 7 à 8 ans</option>
+                    <option value="U11">U11 de 9 à 10 ans</option>
+                    <option value="U13">U13 de 11 à 12 ans</option>
+                    <option value="U15">U15 de 13 à 14 ans</option>
+                    <option value="U18">U18 de 15 à 17 ans</option>
+                    <option value="U21">U21 de 18 à 21 ans</option>
+                    <option value="Seniors">Seniors de 21 ans et plus</option>
+                    <option value="Loisirs">Loisirs de 21 ans et plus</option>
+                </select>
+            </div>
+
+            <h2 class="registration-section-title">
+                Information les U21 serons automatiquemeent rediriger vers la catégorie seniors et auront desoin d'un surclassement pour jouer en seniors.
+            </h2>
+            
+            <h2 class="registration-section-title">
+                Coordonnées
+            </h2>
+
+            <div class="registration-field">
+                <label for="email">Adresse e-mail *</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="registration-field">
+                <label for="telephone">Téléphone *</label>
+                <input
+                    id="telephone"
+                    name="telephone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                >
+            </div>
+
+            <div class="registration-field full-width">
+                <label for="adresse">Adresse postale</label>
+                <input
+                    id="adresse"
+                    name="adresse"
+                    autocomplete="street-address"
+                >
+            </div>
+
+            <h2 class="registration-section-title">
+                Responsable légal
+            </h2>
+
+            <p class="registration-note">
+                À remplir pour les joueurs mineurs.
+            </p>
+
+            <div class="registration-field">
+                <label for="responsable">Nom et prénom du responsable</label>
+                <input id="responsable" name="responsable">
+            </div>
+
+            <div class="registration-field">
+                <label for="tel-responsable">Téléphone du responsable</label>
+                <input
+                    id="tel-responsable"
+                    name="tel_responsable"
+                    type="tel"
+                >
+            </div>
+
+            <div class="registration-field full-width">
+                <label for="message">Informations complémentaires</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Une question ou une précision pour le club..."
+                ></textarea>
+            </div>
+
+            <label class="registration-consent">
+                <input type="checkbox" name="contact_consent" required>
+                <span>
+                    J'accepte que le club utilise ces informations pour répondre
+                    à ma demande d'inscription. *
+                </span>
+            </label>
+
+            <button class="registration-submit" type="submit">
+                Envoyer ma demande →
+            </button>
+
+            <p class="registration-note">
+                Pour le moment, cette page est une maquette :
+                le bouton ne transmet pas encore les informations au club.
+                N'utilise pas de vraies données personnelles avant la mise
+                en place d'un système d'envoi sécurisé.
+            </p>
+
+        </form>
+
+    </main><footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand footer-brand">
+              <span class="brand-fallback">🏀</span>
+              <span class="brand-name">ESGA <b>BASKET</b>
+              </span>
+            </div>
+            <p>Éveil Sportif Genas Azieu Basketball.</p>
+            <p>Genas • Rhône</p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <a href="club.html">Le club</a>
+            <a href="equipes.html">Nos équipes</a>
+            <a href="matchs.html">Matchs & calendrier</a>
+          </div>
+          <div>
+            <h4>Club</h4>
+            <a href="rejoindre.html">Inscriptions</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>2 rue de la Fraternité<br>69740 Genas</p>
+            <a href="mailto:esga-basket@gmail.com">esga-basket@gmail.com</a>
+            <a href="tel:+33650533215">06 50 53 32 15</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">© <span id="year">
+        </span> ESGA Basket <span>Maquette de présentation</span>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+
+    <script>
+        const registrationForm = document.getElementById("registrationForm");
+
+        registrationForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            alert(
+                "Le formulaire est prêt visuellement, mais son système d'envoi " +
+                "n'est pas encore configuré. Contacte le club pour transmettre " +
+                "ta demande."
+            );
+        });
+    </script>
+
+</body>
+</html>

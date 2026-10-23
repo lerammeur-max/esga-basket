@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
+   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html"><img class="brand-logo" src="images/images.jpg" alt="Logo ESGA Basket Genas" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"><span class="brand-name">ESGA <b>BASKET</b></span></a>
       <button class="nav-toggle" aria-label="Menu">☰</button>
@@ -86,6 +86,14 @@
 
               <div class="nav-team-panel" data-panel="mini-basket" hidden>
                 <button class="nav-team-back" type="button" data-back="level-1">← Mini basket</button>
+                <a class="nav-team-item" href="baby.html">
+                    <span>🏀</span>
+                    <span>
+                        <strong>Baby</strong>
+                        <small>Baby basket</small>
+                    </span>
+                    <b>›</b>
+                </a>
                 <button class="nav-team-item nav-team-next" type="button" data-next="mini-basket-feminin">
                   <span>🏀</span>
                   <span><strong>Féminin</strong><small>U9 à U11</small></span>
@@ -136,7 +144,7 @@
                 <a class="nav-team-item" href="loisirs.html"><span>🏀</span><span><strong>Loisirs</strong><small>Adulte</small></span><b>›</b></a>
                 <a class="nav-team-item" href="seniors-fille.html"><span>🏀</span><span><strong>Seniors fille</strong><small>Féminin</small></span><b>›</b></a>
                 <a class="nav-team-item" href="seniors-garcon.html"><span>🏀</span><span><strong>Seniors garçon</strong><small>Masculin</small></span><b>›</b></a>
-                <a class="nav-team-item" href="seniors-2-garcon.html"><span>🏀</span><span><strong>Seniors 2 garçon</strong><small>Masculin</small></span><b>›</b></a>
+                <a class="nav-team-item" href="seniors-2-garcon.html"><span>🏀</span><span><strong>Seniors garçon 2</strong><small>Masculin</small></span><b>›</b></a>
               </div>
             </div>
           </div>
@@ -152,14 +160,47 @@
 <main>
 <section class="page-hero"><div class="container"><span>ENFANTS • MASCULIN</span><h1>U13 masculin</h1><p>La catégorie U13 consolide les fondamentaux et développe la compréhension du jeu.</p></div></section>
 <section class="section"><div class="container"><div class="team-detail-grid">
-  <div class="team-detail-photo"><span>🏀</span><small>PHOTO DE L'ÉQUIPE</small></div>
+  <div class="team-detail-photo"><img src="images/U13-garcon-1.jpeg" alt="U13 masculin"></div>
   <div class="team-detail-content"><span class="eyebrow-dark">ENFANTS • MASCULIN</span><h2>U13 masculin</h2><p>La catégorie U13 consolide les fondamentaux et développe la compréhension du jeu.</p>
-    <div class="team-info-grid"><div><small>CATÉGORIE</small><strong>U13</strong></div><div><small>GENRE</small><strong>Masculin</strong></div><div><small>SAISON</small><strong>2026–2027</strong></div><div><small>STATUT</small><strong>À compléter</strong></div></div>
+    <div class="team-info-grid"><div><small>CATÉGORIE</small><strong>U13</strong></div><div><small>GENRE</small><strong>Masculin</strong></div><div><small>SAISON</small><strong>2026–2027</strong></div><div><small>Coach</small><strong>MAZAUD Noémie </strong></div></div>
     <div class="actions"><a class="btn primary" href="matchs.html">Voir les matchs</a><a class="btn ghost dark-text" href="equipes.html">← Retour aux équipes</a></div>
   </div>
 </div></div></section>
 <section class="section soft"><div class="container"><div class="head"><div><span>INFORMATIONS</span><h2>La vie de <em>l'équipe.</em></h2></div><p>Cette zone pourra accueillir les horaires d'entraînement, le coach, l'effectif, les résultats et les actualités.</p></div><div class="values"><article><b>01</b><h3>Entraînements</h3><p>Jours, horaires et gymnase à renseigner.</p></article><article><b>02</b><h3>Effectif</h3><p>Les joueurs et joueuses pourront être ajoutés ici.</p></article><article><b>03</b><h3>Résultats</h3><p>Les résultats et prochaines rencontres pourront être affichés ici.</p></article></div></div></section>
 </main>
-<footer class="footer"><div class="container footer-bottom"><span>© <span id="year"></span> ESGA Basket — Genas</span><a href="equipes.html">Retour aux équipes</a></div></footer>
-<script src="js/app.js"></script>
+<footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand footer-brand">
+              <span class="brand-fallback">🏀</span>
+              <span class="brand-name">ESGA <b>BASKET</b>
+              </span>
+            </div>
+            <p>Éveil Sportif Genas Azieu Basketball.</p>
+            <p>Genas • Rhône</p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <a href="club.html">Le club</a>
+            <a href="equipes.html">Nos équipes</a>
+            <a href="matchs.html">Matchs & calendrier</a>
+          </div>
+          <div>
+            <h4>Club</h4>
+            <a href="rejoindre.html">Inscriptions</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>2 rue de la Fraternité<br>69740 Genas</p>
+            <a href="mailto:esga-basket@gmail.com">esga-basket@gmail.com</a>
+            <a href="tel:+33650533215">06 50 53 32 15</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">© <span id="year">
+        </span> ESGA Basket <span>Maquette de présentation</span>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
 </body></html>
